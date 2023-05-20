@@ -102,7 +102,6 @@ EOF
 systemctl enable lsyncd.service
 systemctl start lsyncd.service
 
-vitalpbx_cluster_ok:
 echo -e "************************************************************"
 echo -e "* Record Replication has started, this process can take a  *"
 echo -e "* long time depending on the number of recordings, you can *"
