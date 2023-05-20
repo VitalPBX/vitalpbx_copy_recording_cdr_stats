@@ -61,7 +61,7 @@ Are you sure to continue with this settings? (yes,no) > yes
 </pre>
 
 ## Sync Status
-Record Replication has started, this process can take a long time depending on the amount of recordings, you can monitor the process by running the following command:
+This process can take a long time depending on the amount of recordings, you can monitor the process by running the following command:
 <pre>
 at /var/log/lsyncd/lsyncd.status
 </pre>
