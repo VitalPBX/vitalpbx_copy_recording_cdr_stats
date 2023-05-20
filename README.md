@@ -28,15 +28,26 @@ password: (remote server root’s password)
 Now copy and run the following script
 
 <pre>
-wget https://raw.githubusercontent.com/VitalPBX/vitalpbx_ha/master/vpbxreplica.sh
+wget https://raw.githubusercontent.com/VitalPBX/vitalpbx_replica/main/recording.sh
 </pre>
 
 <pre>
-chmod +x vpbxreplica.sh
+chmod +x recording.sh
 </pre>
 
 <pre>
-./vpbxreplica.sh
+./recording.sh
 </pre>
 
-
+<pre>
+************************************************************
+*  Welcome to the VitalPBX Recording Replica installation  *
+*                All options are mandatory                 *
+************************************************************
+IP New Server................ > 192.168.10.61
+************************************************************
+*                   Check Information                      *
+*           Make sure both servers see each other          *
+************************************************************
+Are you sure to continue with this settings? (yes,no) > yes
+</pre>
