@@ -4,6 +4,10 @@ Due to that the best option is to directly copy all the recordings from one serv
 
 That said, the best option is to use Sync to make the copy, and here we will give you the steps to do it.
 
+## Important note
+Before executing this script it is necessary that you make a backup without recordings from your server and restore it on the new server.
+
+## Installation
 We install Lsync on the server where we have the recordings
 
 <pre>
@@ -66,4 +70,12 @@ This process can take a long time depending on the amount of recordings, you can
 cat /var/log/lsyncd/lsyncd.status
 </pre>
 
+## Voice Mails
+If you also want to copy the Voicemail, you must add the following script in the recordings.sh file.
+
+<pre>
+
+
+
+</pre>
 
