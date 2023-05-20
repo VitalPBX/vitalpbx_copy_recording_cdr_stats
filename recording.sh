@@ -58,14 +58,13 @@ fi
 
 cat > config.txt << EOF
 $ip_master
-$ip_standby
 EOF
 
 echo -e "************************************************************"
 echo -e "*             Configure Sync in Old Server                 *"
 echo -e "************************************************************"
 
-cat > /etc/lsyncd.conf << EOF
+cat > /etc/lsyncd/lsyncd.conf.lua << EOF
 ----
 -- User configuration file for lsyncd.
 --
@@ -73,27 +72,18 @@ cat > /etc/lsyncd.conf << EOF
 --
 settings {
 		logfile    = "/var/log/lsyncd/lsyncd.log",
-		statusFile = "/var/log/lsyncd/lsyncd-status.log",
+		statusFile = "/var/log/lsyncd/lsyncd.status",
 		statusInterval = 20,
-		nodaemon   = true,
+		nodaemon   = false,
 		insist = true,
 }
 sync {
-		default.rsync,
-		source="/var/spool/asterisk/monitor",
-		target="$ip_standby:/var/spool/asterisk/monitor",
-		delete = 'running',
-                --delay = 5,
-		rsync={
-                		-- timeout = 3000,
-                		update = true,
-                		_extra={"--temp-dir=/home/sync/var/spool/asterisk/monitor_temp/"},
-                		times = true,
-                		archive = true,
-                		compress = true,
-                		perms = true,
-                		acls = true,
-                		owner = true,
+		default.rsyncssh,
+		source = "/var/spool/asterisk/monitor",
+		host = "$ip_master",
+		targetdir = "/var/spool/asterisk/monitor",
+		rsync = {
+				owner = true,
 				group = true
 		}
 }
