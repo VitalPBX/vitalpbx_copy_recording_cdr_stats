@@ -74,8 +74,19 @@ cat /var/log/lsyncd/lsyncd.status
 If you also want to copy the Voicemail, you must add the following script in the recordings.sh file.
 
 <pre>
+nano /etc/lsyncd/
+</pre>
 
-
-
+<pre>
+sync {
+		default.rsyncssh,
+		source = "/var/spool/asterisk/monitor",
+		host = "$ip_master",
+		targetdir = "/var/spool/asterisk/monitor",
+		rsync = {
+				owner = true,
+				group = true
+		}
+}
 </pre>
 
