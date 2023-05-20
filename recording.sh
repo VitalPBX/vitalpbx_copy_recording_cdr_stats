@@ -61,7 +61,6 @@ $ip_master
 $ip_standby
 EOF
 
-create_lsyncd_config_file:
 echo -e "************************************************************"
 echo -e "*             Configure Sync in Old Server                 *"
 echo -e "************************************************************"
