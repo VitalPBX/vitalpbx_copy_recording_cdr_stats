@@ -36,7 +36,7 @@ fi
 
 while [[ $ip_master == '' ]]
 do
-    read -p "IP Server 1............. > " ip_master 
+    read -p "IP New Server............. > " ip_master 
 done 
 
 echo -e "************************************************************"
