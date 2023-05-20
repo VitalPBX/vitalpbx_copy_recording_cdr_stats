@@ -10,6 +10,11 @@ We install Lsync on the server where we have the recordings
 apt-get install lsyncd
 </pre>
 
+Create the following:
+<pre>
+mkdir /etc/lsyncd
+</pre>
+
 ## Create authorization key for the access to remote servers without credentials
 
 <pre>
