@@ -80,9 +80,9 @@ nano /etc/lsyncd/lsyncd.conf.lua
 <pre>
 sync {
 		default.rsyncssh,
-		source = "/var/spool/asterisk/monitor",
+		source = "/var/spool/asterisk/voicemail",
 		host = "$ip_master",
-		targetdir = "/var/spool/asterisk/monitor",
+		targetdir = "/var/spool/asterisk/voicemail",
 		rsync = {
 				owner = true,
 				group = true
