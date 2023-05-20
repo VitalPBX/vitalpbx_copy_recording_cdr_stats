@@ -70,11 +70,11 @@ This process can take a long time depending on the amount of recordings, you can
 cat /var/log/lsyncd/lsyncd.status
 </pre>
 
-## Voice Mails
-If you also want to copy the Voicemail, you must add the following script in the recordings.sh file.
+## Voicemails
+If you also want to copy Voicemail, you must add the following script to the end of the recordings.sh file.
 
 <pre>
-nano /etc/lsyncd/
+nano /etc/lsyncd/lsyncd.conf.lua
 </pre>
 
 <pre>
@@ -90,3 +90,7 @@ sync {
 }
 </pre>
 
+And we restart the service
+<pre>
+systemctl restart lsyncd
+</pre>
