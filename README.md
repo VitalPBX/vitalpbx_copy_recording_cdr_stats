@@ -13,6 +13,9 @@ apt-get install lsyncd
 Create the following:
 <pre>
 mkdir /etc/lsyncd
+mkdir /var/log/lsyncd
+touch /var/log/lsyncd/lsyncd.log
+touch /var/log/lsyncd/lsyncd.status
 </pre>
 
 ## Create authorization key for the access to remote servers without credentials
