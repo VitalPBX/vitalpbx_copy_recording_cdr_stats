@@ -44,7 +44,7 @@ chmod +x recording.sh
 *  Welcome to the VitalPBX Recording Replica installation  *
 *                All options are mandatory                 *
 ************************************************************
-IP New Server................ > 192.168.10.61
+IP New Server................ > remoteserverip
 ************************************************************
 *                   Check Information                      *
 *           Make sure both servers see each other          *
