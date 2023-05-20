@@ -71,7 +71,7 @@ cat /var/log/lsyncd/lsyncd.status
 </pre>
 
 ## Voicemails
-If you also want to copy Voicemail, you must add the following script to the end of the recordings.sh file.
+If you also want to copy Voicemail, you must add the following script to the end of the /etc/lsyncd/lsyncd.conf.lua file.
 
 <pre>
 nano /etc/lsyncd/lsyncd.conf.lua
