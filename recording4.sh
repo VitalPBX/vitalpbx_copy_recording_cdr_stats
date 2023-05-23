@@ -72,16 +72,15 @@ cat > /etc/lsyncd/lsyncd.conf.lua << EOF
 --
 settings {
 		logfile    = "/var/log/lsyncd/lsyncd.log",
-		statusFile = "/var/log/lsyncd/lsyncd-status.log",
+		statusFile = "/var/log/lsyncd/lsyncd.status",
 		statusInterval = 20,
-		nodaemon   = true,
+		nodaemon   = false,
 		insist = true,
 }
-
 sync {
 		default.rsyncssh,
 		source = "/var/spool/asterisk/monitor",
-		host = "$ip_master",
+		host = "$ip_standby",
 		targetdir = "/var/spool/asterisk/monitor",
 		rsync = {
 				owner = true,
