@@ -10,12 +10,12 @@ Before executing this script it is necessary that you make a backup without reco
 ## Installation
 We install Lsync on the server where we have the recordings
 
-VitalPBX 3
+VitalPBX 3 (Centos 9)
 <pre>
 yum install lsyncd
 </pre>
 
-VitalPBX 4
+VitalPBX 4 (Debian 11)
 <pre>
 apt-get install lsyncd
 </pre>
