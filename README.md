@@ -45,7 +45,7 @@ password: (remote server root’s password)
 ## Script
 Now copy and run the following script
 
-VitalPBX 4
+VitalPBX 3
 <pre>
 wget https://raw.githubusercontent.com/VitalPBX/vitalpbx_recording_V3toV4/main/recordingv3.sh
 </pre>
