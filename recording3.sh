@@ -81,7 +81,7 @@ settings {
 sync {
 		default.rsync,
 		source="/var/spool/asterisk/monitor",
-		target="$ip_standby:/var/spool/asterisk/monitor",
+		target="$ip_master:/var/spool/asterisk/monitor",
 		rsync={
 				owner = true,
 				group = true
