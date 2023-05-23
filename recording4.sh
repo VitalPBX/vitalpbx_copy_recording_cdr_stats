@@ -80,9 +80,9 @@ settings {
 
 sync {
 		default.rsyncssh,
-		source = "/var/spool/asterisk/voicemail",
+		source = "/var/spool/asterisk/monitor",
 		host = "$ip_master",
-		targetdir = "/var/spool/asterisk/voicemail",
+		targetdir = "/var/spool/asterisk/monitor",
 		rsync = {
 				owner = true,
 				group = true
