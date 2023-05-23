@@ -94,13 +94,14 @@ nano /etc/lsyncd/lsyncd.conf.lua
 sync {
 		default.rsync,
 		source = "/var/spool/asterisk/voicemail",
-		target="$ip_standby:/var/spool/asterisk/voicemail",
+		target="$ip_master:/var/spool/asterisk/voicemail",
 		rsync = {
 				owner = true,
 				group = true
 		}
 }
 </pre>
+Change $ip_master to the IP of the new server
 
 VitalPBX 4 (Debian 11)
 <pre>
@@ -119,6 +120,8 @@ sync {
 		}
 }
 </pre>
+
+Change $ip_master to the IP of the new server
 
 And we restart the service
 <pre>
