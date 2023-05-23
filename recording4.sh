@@ -79,9 +79,10 @@ settings {
 }
 
 sync {
-		default.rsync,
+		default.rsyncssh,
 		source = "/var/spool/asterisk/voicemail",
-		target="$ip_standby:/var/spool/asterisk/voicemail",
+		host = "$ip_master",
+		targetdir = "/var/spool/asterisk/voicemail",
 		rsync = {
 				owner = true,
 				group = true
