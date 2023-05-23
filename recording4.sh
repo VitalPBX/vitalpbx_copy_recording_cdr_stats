@@ -90,7 +90,7 @@ sync {
 EOF
 
 systemctl enable lsyncd.service
-systemctl start lsyncd.service
+systemctl restart lsyncd.service
 
 echo -e "************************************************************"
 echo -e "* Record Replication has started, this process can take a  *"
