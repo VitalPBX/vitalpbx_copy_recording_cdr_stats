@@ -130,3 +130,13 @@ And we restart the service
 <pre>
 systemctl restart lsyncd
 </pre>
+
+To see the number of GB to copy:
+<pre>
+du -sh /var/spool/asterisk/monitor
+</pre>
+
+To see what's copied:
+<pre>
+ssh root@ip_newserver "du -sh /var/spool/asterisk/monitor"
+</pre>
