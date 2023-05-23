@@ -83,9 +83,9 @@ cat /var/log/lsyncd/lsyncd.status
 </pre>
 
 ## Voicemails
-If you also want to copy Voicemail, you must add the following script to the end of the /etc/lsyncd/lsyncd.conf.lua file.
 
 VitalPBX 3 (Centos 7.9)
+If you also want to copy Voicemail, you must add the following script to the end of the /etc/lsyncd.conf file.
 <pre>
 nano /etc/lsyncd.conf
 </pre>
@@ -104,6 +104,7 @@ sync {
 Change $ip_master to the IP of the new server
 
 VitalPBX 4 (Debian 11)
+If you also want to copy Voicemail, you must add the following script to the end of the /etc/lsyncd/lsyncd.conf.lua file.
 <pre>
 nano /etc/lsyncd/lsyncd.conf.lua
 </pre>
