@@ -1,4 +1,4 @@
-# Migrate Recordings from VitalPBX 3 to VitalPBX 4
+# Migrate Recordings from VitalPBX 3/4 to VitalPBX 3/4
 On some occasions, the amount of recordings that we have in a VitalPBX makes it impossible to make a backup to transfer it to another server. Even though we can do the backup from the console, there might not be enough space on the hard drive to back it up.
 Due to that the best option is to directly copy all the recordings from one server to another. This can be done manually with scp, however we run the risk that for some reason the copy is aborted and we have to start over.
 
