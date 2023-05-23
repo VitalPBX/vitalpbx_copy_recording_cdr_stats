@@ -87,7 +87,7 @@ If you also want to copy Voicemail, you must add the following script to the end
 
 VitalPBX 3 (Centos 7.9)
 <pre>
-nano /etc/lsyncd/lsyncd.conf.lua
+nano /etc/lsyncd.conf
 </pre>
 
 <pre>
