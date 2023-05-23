@@ -64,7 +64,7 @@ echo -e "************************************************************"
 echo -e "*             Configure Sync in Old Server                 *"
 echo -e "************************************************************"
 
-cat > /etc/lsyncd.conf << EOF
+cat > /etc/lsyncd/lsyncd.conf.lua << EOF
 ----
 -- User configuration file for lsyncd.
 --
@@ -80,9 +80,9 @@ settings {
 
 sync {
 		default.rsync,
-		source="/var/spool/asterisk/monitor",
-		target="$ip_standby:/var/spool/asterisk/monitor",
-		rsync={
+		source = "/var/spool/asterisk/voicemail",
+		target="$ip_standby:/var/spool/asterisk/voicemail",
+		rsync = {
 				owner = true,
 				group = true
 		}
