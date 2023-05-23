@@ -80,7 +80,7 @@ settings {
 sync {
 		default.rsyncssh,
 		source = "/var/spool/asterisk/monitor",
-		host = "$ip_standby",
+		host = "$ip_master",
 		targetdir = "/var/spool/asterisk/monitor",
 		rsync = {
 				owner = true,
