@@ -64,7 +64,7 @@ echo -e "************************************************************"
 echo -e "*             Configure Sync in Old Server                 *"
 echo -e "************************************************************"
 
-cat > /etc/lsyncd/lsyncd.conf.lua << EOF
+cat > /etc/lsyncd.conf << EOF
 ----
 -- User configuration file for lsyncd.
 --
@@ -72,17 +72,17 @@ cat > /etc/lsyncd/lsyncd.conf.lua << EOF
 --
 settings {
 		logfile    = "/var/log/lsyncd/lsyncd.log",
-		statusFile = "/var/log/lsyncd/lsyncd.status",
+		statusFile = "/var/log/lsyncd/lsyncd-status.log",
 		statusInterval = 20,
-		nodaemon   = false,
+		nodaemon   = true,
 		insist = true,
 }
+
 sync {
-		default.rsyncssh,
-		source = "/var/spool/asterisk/monitor",
-		host = "$ip_master",
-		targetdir = "/var/spool/asterisk/monitor",
-		rsync = {
+		default.rsync,
+		source="/var/spool/asterisk/monitor",
+		target="$ip_standby:/var/spool/asterisk/monitor",
+		rsync={
 				owner = true,
 				group = true
 		}
