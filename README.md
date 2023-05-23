@@ -85,6 +85,24 @@ cat /var/log/lsyncd/lsyncd.status
 ## Voicemails
 If you also want to copy Voicemail, you must add the following script to the end of the /etc/lsyncd/lsyncd.conf.lua file.
 
+VitalPBX 3 (Centos 7.9)
+<pre>
+nano /etc/lsyncd/lsyncd.conf.lua
+</pre>
+
+<pre>
+sync {
+		default.rsync,
+		source = "/var/spool/asterisk/voicemail",
+		target="$ip_standby:/var/spool/asterisk/voicemail",
+		rsync = {
+				owner = true,
+				group = true
+		}
+}
+</pre>
+
+VitalPBX 4 (Debian 11)
 <pre>
 nano /etc/lsyncd/lsyncd.conf.lua
 </pre>
