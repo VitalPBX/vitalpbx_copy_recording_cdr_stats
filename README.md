@@ -140,3 +140,8 @@ To see what's copied:
 <pre>
 ssh root@ip_newserver "du -sh /var/spool/asterisk/monitor"
 </pre>
+
+To see the progress of the copy, use the following command
+<pre>
+rsync -ah --progress /var/spool/asterisk/monitor root@ip_master:/var/spool/asterisk/monitor
+</pre>
