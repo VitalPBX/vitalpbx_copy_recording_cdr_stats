@@ -68,7 +68,7 @@ chmod +x recording.sh
 *  Welcome to the VitalPBX Recording Replica installation  *
 *                All options are mandatory                 *
 ************************************************************
-IP New Server................ > remoteserverip
+IP New Server................ > ip_newserver
 ************************************************************
 *                   Check Information                      *
 *           Make sure both servers see each other          *
@@ -95,7 +95,7 @@ nano /etc/lsyncd.conf
 sync {
 		default.rsync,
 		source = "/var/spool/asterisk/voicemail",
-		target="$ip_master:/var/spool/asterisk/voicemail",
+		target="$ip_newserver:/var/spool/asterisk/voicemail",
 		rsync = {
 				owner = true,
 				group = true
@@ -115,7 +115,7 @@ nano /etc/lsyncd/lsyncd.conf.lua
 sync {
 		default.rsyncssh,
 		source = "/var/spool/asterisk/voicemail",
-		host = "$ip_master",
+		host = "$ip_newserver",
 		targetdir = "/var/spool/asterisk/voicemail",
 		rsync = {
 				owner = true,
@@ -143,5 +143,5 @@ ssh root@ip_newserver "du -sh /var/spool/asterisk/monitor"
 
 To see the progress of the copy, use the following command
 <pre>
-rsync -ah --progress /var/spool/asterisk/monitor root@ip_master:/var/spool/asterisk/monitor
+rsync -ah --progress /var/spool/asterisk/monitor root@ip_newserver:/var/spool/asterisk/monitor
 </pre>
