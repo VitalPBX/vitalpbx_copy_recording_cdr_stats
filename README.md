@@ -103,7 +103,7 @@ nano /etc/lsyncd.conf
 sync {
 		default.rsync,
 		source = "/var/spool/asterisk/voicemail",
-		target="$ip_newserver:/var/spool/asterisk/voicemail",
+		target="<strong>$ip_newserver</strong>:/var/spool/asterisk/voicemail",
 		rsync = {
 				owner = true,
 				group = true
@@ -123,7 +123,7 @@ nano /etc/lsyncd/lsyncd.conf.lua
 sync {
 		default.rsyncssh,
 		source = "/var/spool/asterisk/voicemail",
-		host = "$ip_newserver",
+		host = "<strong>$ip_newserver</strong>",
 		targetdir = "/var/spool/asterisk/voicemail",
 		rsync = {
 				owner = true,
@@ -132,7 +132,7 @@ sync {
 }
 </pre>
 
-Change $ip_newserver to the IP of the new server
+Change <strong>$ip_newserver</strong> to the IP of the new server
 
 And we restart the service
 <pre>
@@ -163,10 +163,10 @@ mysqldump -u root sonata_stats > sonata_stats.sql
 </pre>
 Now we proceed to copy to a temporary directory on the new server.
 <pre>
-scp asterisk.sql root@`IPNEWSERVER`:/tmp/asterisk.sql
-scp sonata_stats.sql root@`IPNEWSERVER`:/tmp/sonata_stats.sql
+scp asterisk.sql root@<strong>IPNEWSERVER</strong>:/tmp/asterisk.sql
+scp sonata_stats.sql root@<strong>IPNEWSERVER</strong>:/tmp/sonata_stats.sql
 </pre>
-Change **IPNEWSERVER** to the IP of the new server<br>
+Change <strong>IPNEWSERVER</strong> to the IP of the new server<br>
 We connect to the new server and go to the folder where we copied the database backup (/tmp/).<br>
 And we proceed to perform the restore
 <pre>
