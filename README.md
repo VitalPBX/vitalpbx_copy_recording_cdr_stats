@@ -50,17 +50,25 @@ VitalPBX 3
 wget https://raw.githubusercontent.com/VitalPBX/vitalpbx_recording_V3toV4/main/recording3.sh
 </pre>
 
+<pre>
+chmod +x recording3.sh
+</pre>
+
+<pre>
+./recording3.sh
+</pre>
+
 VitalPBX 4
 <pre>
 wget https://raw.githubusercontent.com/VitalPBX/vitalpbx_recording_V3toV4/main/recording4.sh
 </pre>
 
 <pre>
-chmod +x recording.sh
+chmod +x recording4.sh
 </pre>
 
 <pre>
-./recording.sh
+./recording4.sh
 </pre>
 
 <pre>
