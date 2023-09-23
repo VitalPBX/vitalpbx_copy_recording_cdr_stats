@@ -1,4 +1,4 @@
-# Migrate Recordings from VitalPBX to VitalPBX 
+# Migrate Recordings and CDRs from VitalPBX to VitalPBX 
 On some occasions, the amount of recordings that we have in a VitalPBX makes it impossible to make a backup to transfer it to another server. Even though we can do the backup from the console, there might not be enough space on the hard drive to back it up.
 Due to that the best option is to directly copy all the recordings from one server to another. This can be done manually with scp, however we run the risk that for some reason the copy is aborted and we have to start over.
 
@@ -20,7 +20,7 @@ VitalPBX 4 (Debian 11)
 apt-get install lsyncd
 </pre>
 
-Create the following:
+Create the following in Centos and Debian:
 <pre>
 mkdir /etc/lsyncd
 mkdir /var/log/lsyncd
@@ -145,3 +145,25 @@ To see the progress of the copy, use the following command
 <pre>
 rsync -ah --progress /var/spool/asterisk/monitor root@ip_newserver:/var/spool/asterisk/monitor
 </pre>
+
+## CDRs and Stats
+Sometimes the CDR volume is quite large and it is not possible to include it in the backup done through the GUI. In these cases it is recommended to copy the databases from the console as shown below.
+First we enter the server where the information is:
+Call CDRs
+<pre>
+mysqldump -u root asterisk > asterisk.sql
+</pre>
+Call queue statistics - Optional
+<pre>
+mysqldump -u root stats > stats.sql
+</pre>
+Now we proceed to copy to a temporary directory on the new server.
+<pre>
+scp asterisk.sql root@IPNEWSERVER:/tmp/asterisk.sql
+</pre>
+We connect to the new server and go to the folder where we copied the database backup (/tmp/).
+And we proceed to perform the restore
+<pre>
+mysql mysql -u root <  /tmp/asterisk.sql
+</pre>
+
