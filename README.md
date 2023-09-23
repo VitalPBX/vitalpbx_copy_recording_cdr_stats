@@ -20,7 +20,7 @@ VitalPBX 4 (Debian 11)
 apt-get install lsyncd
 </pre>
 
-Create the following in Centos and Debian:
+Create the following for Centos or Debian:
 <pre>
 mkdir /etc/lsyncd
 mkdir /var/log/lsyncd
