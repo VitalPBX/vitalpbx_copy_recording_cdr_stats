@@ -163,7 +163,7 @@ mysqldump -u root asterisk > asterisk.sql
 </pre>
 Call queue statistics - Optional
 <pre>
-mysqldump -u root stats > stats.sql
+mysqldump -u root sonata_stats > sonata_stats.sql
 </pre>
 Now we proceed to copy to a temporary directory on the new server.
 <pre>
