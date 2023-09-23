@@ -103,7 +103,7 @@ nano /etc/lsyncd.conf
 sync {
 		default.rsync,
 		source = "/var/spool/asterisk/voicemail",
-		target="<strong>$ip_newserver</strong>:/var/spool/asterisk/voicemail",
+		target="<strong>ip_newserver</strong>:/var/spool/asterisk/voicemail",
 		rsync = {
 				owner = true,
 				group = true
@@ -123,7 +123,7 @@ nano /etc/lsyncd/lsyncd.conf.lua
 sync {
 		default.rsyncssh,
 		source = "/var/spool/asterisk/voicemail",
-		host = "<strong>$ip_newserver</strong>",
+		host = "<strong>ip_newserver</strong>",
 		targetdir = "/var/spool/asterisk/voicemail",
 		rsync = {
 				owner = true,
@@ -132,7 +132,7 @@ sync {
 }
 </pre>
 
-Change <strong>$ip_newserver</strong> to the IP of the new server
+Change <strong>ip_newserver</strong> to the IP of the new server
 
 And we restart the service
 <pre>
@@ -151,7 +151,7 @@ ssh root@ip_newserver "du -sh /var/spool/asterisk/monitor"
 
 To see the progress of the copy, use the following command
 <pre>
-rsync -ah --progress /var/spool/asterisk/monitor root@ip_newserver:/var/spool/asterisk/monitor
+rsync -ah --progress /var/spool/asterisk/monitor root@<strong>ip_newserver</strong>:/var/spool/asterisk/monitor
 </pre>
 
 ## CDRs and Stats
