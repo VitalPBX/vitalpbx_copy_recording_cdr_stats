@@ -110,7 +110,7 @@ sync {
 		}
 }
 </pre>
-Change $ip_master to the IP of the new server
+Change $ip_newserver to the IP of the new server
 
 VitalPBX 4 (Debian 11)
 
@@ -132,7 +132,7 @@ sync {
 }
 </pre>
 
-Change $ip_master to the IP of the new server
+Change $ip_newserver to the IP of the new server
 
 And we restart the service
 <pre>
