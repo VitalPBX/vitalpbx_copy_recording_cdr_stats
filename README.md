@@ -60,7 +60,7 @@ chmod +x recording3.sh
 
 #### VitalPBX 4
 <pre>
-wget https://raw.githubusercontent.com/VitalPBX/vitalpbx_recording_V3toV4/main/recording4.sh
+wget https://raw.githubusercontent.com/VitalPBX/vitalpbx_copy_recording_cdr_stats/main/recording4.sh
 </pre>
 
 <pre>
