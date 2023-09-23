@@ -166,6 +166,7 @@ Now we proceed to copy to a temporary directory on the new server.
 scp asterisk.sql root@IPNEWSERVER:/tmp/asterisk.sql
 scp sonata_stats.sql root@IPNEWSERVER:/tmp/sonata_stats.sql
 </pre>
+Change IPNEWSERVER to the IP of the new server
 We connect to the new server and go to the folder where we copied the database backup (/tmp/).
 And we proceed to perform the restore
 <pre>
