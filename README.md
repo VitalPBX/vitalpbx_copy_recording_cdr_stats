@@ -147,10 +147,8 @@ rsync -ah --progress /var/spool/asterisk/monitor root@ip_newserver:/var/spool/as
 </pre>
 
 ## CDRs and Stats
-Sometimes the CDR volume is quite large and it is not possible to include it in the backup done through the GUI. In these cases it is recommended to copy the databases from the console as shown below.
-
-First we enter the server where the information is:
-
+Sometimes the CDR volume is quite large and it is not possible to include it in the backup done through the GUI. In these cases it is recommended to copy the databases from the console as shown below.<br>
+First we enter the server where the information is:<br>
 Call CDRs
 <pre>
 mysqldump -u root asterisk > asterisk.sql
