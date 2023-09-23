@@ -47,7 +47,7 @@ Now copy and run the following script
 
 #### VitalPBX 3
 <pre>
-wget https://raw.githubusercontent.com/VitalPBX/vitalpbx_recording_V3toV4/main/recording3.sh
+wget https://raw.githubusercontent.com/VitalPBX/vitalpbx_copy_recording_cdr_stats/main/recording3.sh
 </pre>
 
 <pre>
