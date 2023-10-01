@@ -170,7 +170,7 @@ Change <strong>IPNEWSERVER</strong> to the IP of the new server<br><br>
 We connect to the new server and go to the folder where we copied the database backup (/tmp/).<br>
 And we proceed to perform the restore
 <pre>
-mysql -u root <  /tmp/asterisk.sql
-mysql -u root <  /tmp/sonata_stats.sql
+mysql -u root asterisk <  /tmp/asterisk.sql
+mysql -u root sonata_stats <  /tmp/sonata_stats.sql
 </pre>
 
