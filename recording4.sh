@@ -86,6 +86,9 @@ sync {
 				owner = true,
 				group = true
 		}
+   		ssh = {
+     			port = 22
+   		}
 }
 EOF
 
